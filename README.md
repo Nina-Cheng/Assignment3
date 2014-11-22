@@ -1,12 +1,12 @@
-Assignment3 for getting and cleaning data
+Assignment for getting and cleaning data
 ===========
-## Preparations before running the code
+# Preparations before running the code
 
 1. connect to internet
 2. ensure run_analysis.R is in your current working directory
 3. install package "plyr" if you haven't before
 
-## The way run_analysis.R works
+# The way run_analysis.R works
 
 1. Downloads file from "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" and unzips the data to the working directory. 
 2. Reads both the training and test data set into R as data_train and data_test
