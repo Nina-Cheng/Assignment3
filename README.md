@@ -10,8 +10,8 @@ Assignment for getting and cleaning data
 
 1. Downloads file from "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" and unzips the data to the working directory. 
 2. Reads both the training and test data set into R as data_train and data_test
-3. Merges the training and the test sets to create one complete data set and labels the columns accordingly.
-4. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Merges the training and the test sets to create one complete data set (Data) and labels the columns accordingly.
+4. Extracts only the measurements on the mean and standard deviation for each measurement and create a new data set Extracts.
 5. Uses descriptive activity names to name the activities in the data set
 6. Appropriately labels the data set with descriptive variable names. 
 7. creates a second, independent tidy data set with the average of each variable for each activity and each subject by using numcolwise(mean)
