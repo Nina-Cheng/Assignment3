@@ -1,124 +1,264 @@
 ##CodeBook for Tidy_data
 
-SubjectID                 Activity  TimeDomainBodyAccelerationMeanDirectionX
- 1      :  6   WALKING           :30   Min.   :0.2216                          
- 2      :  6   WALKING_UPSTAIRS  :30   1st Qu.:0.2712                          
- 3      :  6   WALKING_DOWNSTAIRS:30   Median :0.2770                          
- 4      :  6   SITTING           :30   Mean   :0.2743                          
- 5      :  6   STANDING          :30   3rd Qu.:0.2800                          
- 6      :  6   LAYING            :30   Max.   :0.3015                          
- (Other):144                                                                   
- TimeDomainBodyAccelerationMeanDirectionY TimeDomainBodyAccelerationMeanDirectionZ
- Min.   :-0.040514                        Min.   :-0.15251                        
- 1st Qu.:-0.020022                        1st Qu.:-0.11207                        
- Median :-0.017262                        Median :-0.10819                        
- Mean   :-0.017876                        Mean   :-0.10916                        
- 3rd Qu.:-0.014936                        3rd Qu.:-0.10443                        
- Max.   :-0.001308                        Max.   :-0.07538                        
-                                                                                  
- TimeDomainBodyAccelerationStandardDeviationDirectionX TimeDomainBodyAccelerationStandardDeviationDirectionY
- Min.   :-0.9961                                       Min.   :-0.99024                                     
- 1st Qu.:-0.9799                                       1st Qu.:-0.94205                                     
- Median :-0.7526                                       Median :-0.50897                                     
- Mean   :-0.5577                                       Mean   :-0.46046                                     
- 3rd Qu.:-0.1984                                       3rd Qu.:-0.03077                                     
- Max.   : 0.6269                                       Max.   : 0.61694                                     
-                                                                                                            
- TimeDomainBodyAccelerationStandardDeviationDirectionZ TimeDomainGravityAccelerationMeanDirectionX
- Min.   :-0.9877                                       Min.   :-0.6800                            
- 1st Qu.:-0.9498                                       1st Qu.: 0.8376                            
- Median :-0.6518                                       Median : 0.9208                            
- Mean   :-0.5756                                       Mean   : 0.6975                            
- 3rd Qu.:-0.2306                                       3rd Qu.: 0.9425                            
- Max.   : 0.6090                                       Max.   : 0.9745                            
-                                                                                                  
- TimeDomainGravityAccelerationMeanDirectionY TimeDomainGravityAccelerationMeanDirectionZ
- Min.   :-0.47989                            Min.   :-0.49509                           
- 1st Qu.:-0.23319                            1st Qu.:-0.11726                           
- Median :-0.12782                            Median : 0.02384                           
- Mean   :-0.01621                            Mean   : 0.07413                           
- 3rd Qu.: 0.08773                            3rd Qu.: 0.14946                           
- Max.   : 0.95659                            Max.   : 0.95787                           
-                                                                                        
- TimeDomainGravityAccelerationStandardDeviationDirectionX
- Min.   :-0.9968                                         
- 1st Qu.:-0.9825                                         
- Median :-0.9695                                         
- Mean   :-0.9638                                         
- 3rd Qu.:-0.9509                                         
- Max.   :-0.8296                                         
-                                                         
- TimeDomainGravityAccelerationStandardDeviationDirectionY
- Min.   :-0.9942                                         
- 1st Qu.:-0.9711                                         
- Median :-0.9590                                         
- Mean   :-0.9524                                         
- 3rd Qu.:-0.9370                                         
- Max.   :-0.6436                                         
-                                                         
- TimeDomainGravityAccelerationStandardDeviationDirectionZ TimeDomainBodyAccelerationJerkSignalMeanDirectionX
- Min.   :-0.9910                                          Min.   :0.04269                                   
- 1st Qu.:-0.9605                                          1st Qu.:0.07396                                   
- Median :-0.9450                                          Median :0.07640                                   
- Mean   :-0.9364                                          Mean   :0.07947                                   
- 3rd Qu.:-0.9180                                          3rd Qu.:0.08330                                   
- Max.   :-0.6102                                          Max.   :0.13019                                   
-                                                                                                            
- TimeDomainBodyAccelerationJerkSignalMeanDirectionY TimeDomainBodyAccelerationJerkSignalMeanDirectionZ
- Min.   :-0.0386872                                 Min.   :-0.067458                                 
- 1st Qu.: 0.0004664                                 1st Qu.:-0.010601                                 
- Median : 0.0094698                                 Median :-0.003861                                 
- Mean   : 0.0075652                                 Mean   :-0.004953                                 
- 3rd Qu.: 0.0134008                                 3rd Qu.: 0.001958                                 
- Max.   : 0.0568186                                 Max.   : 0.038053                                 
-                                                                                                      
- TimeDomainBodyAccelerationJerkSignalStandardDeviationDirectionX
- Min.   :-0.9946                                                
- 1st Qu.:-0.9832                                                
- Median :-0.8104                                                
- Mean   :-0.5949                                                
- 3rd Qu.:-0.2233                                                
- Max.   : 0.5443                                                
+SubjectID  
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years.Each person is given a ID. The ID has been converted to a factor level starting from 1 to 30.
+
+Activity  
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+
+TimeDomainBodyAccelerationMeanDirectionX
+
+Mean of Time Domain signals of body acceleration in direction x
+Min.   :0.2216                          
+1st Qu.:0.2712                          
+Median :0.2770                          
+Mean   :0.2743                          
+3rd Qu.:0.2800                          
+Max.   :0.3015                          
                                                                 
- TimeDomainBodyAccelerationJerkSignalStandardDeviationDirectionY
- Min.   :-0.9895                                                
- 1st Qu.:-0.9724                                                
- Median :-0.7756                                                
- Mean   :-0.5654                                                
- 3rd Qu.:-0.1483                                                
- Max.   : 0.3553                                                
-                                                                
- TimeDomainBodyAccelerationJerkSignalStandardDeviationDirectionZ TimeDomainBodyGyroscopeMeanDirectionX
- Min.   :-0.99329                                                Min.   :-0.20578                     
- 1st Qu.:-0.98266                                                1st Qu.:-0.04712                     
- Median :-0.88366                                                Median :-0.02871                     
- Mean   :-0.73596                                                Mean   :-0.03244                     
- 3rd Qu.:-0.51212                                                3rd Qu.:-0.01676                     
- Max.   : 0.03102                                                Max.   : 0.19270                     
-                                                                                                      
- TimeDomainBodyGyroscopeMeanDirectionY TimeDomainBodyGyroscopeMeanDirectionZ
- Min.   :-0.20421                      Min.   :-0.07245                     
- 1st Qu.:-0.08955                      1st Qu.: 0.07475                     
- Median :-0.07318                      Median : 0.08512                     
- Mean   :-0.07426                      Mean   : 0.08744                     
- 3rd Qu.:-0.06113                      3rd Qu.: 0.10177                     
- Max.   : 0.02747                      Max.   : 0.17910                     
-                                                                            
- TimeDomainBodyGyroscopeStandardDeviationDirectionX TimeDomainBodyGyroscopeStandardDeviationDirectionY
- Min.   :-0.9943                                    Min.   :-0.9942                                   
- 1st Qu.:-0.9735                                    1st Qu.:-0.9629                                   
- Median :-0.7890                                    Median :-0.8017                                   
- Mean   :-0.6916                                    Mean   :-0.6533                                   
- 3rd Qu.:-0.4414                                    3rd Qu.:-0.4196                                   
- Max.   : 0.2677                                    Max.   : 0.4765                                   
-                                                                                                      
- TimeDomainBodyGyroscopeStandardDeviationDirectionZ TimeDomainBodyGyroscopeJerkSignalMeanDirectionX
- Min.   :-0.9855                                    Min.   :-0.15721                               
- 1st Qu.:-0.9609                                    1st Qu.:-0.10322                               
- Median :-0.8010                                    Median :-0.09868                               
- Mean   :-0.6164                                    Mean   :-0.09606                               
- 3rd Qu.:-0.3106                                    3rd Qu.:-0.09110                               
- Max.   : 0.5649                                    Max.   :-0.02209                               
+TimeDomainBodyAccelerationMeanDirectionY 
+
+Mean of Time Domain signals of body acceleration in direction y
+
+Min.   :-0.040514                                                
+1st Qu.:-0.020022                                             
+Median :-0.017262                                               
+Mean   :-0.017876                                             
+3rd Qu.:-0.014936                                   
+Max.   :-0.001308                                              
+
+TimeDomainBodyAccelerationMeanDirectionZ
+
+Mean of Time Domain signals of body acceleration in direction z
+
+Min.:-0.15251
+1stQu.:-0.11207
+Median:-0.10819
+Mean:-0.10916
+3rdQu.:-0.10443
+Max.:-0.07538
+
+TimeDomainBodyAccelerationStandardDeviationDirectionX 
+
+Standard Deviation of Time Domain signals of body acceleration in direction x
+
+Min.:-0.9961
+1stQu.:-0.9799
+Median:-0.7526
+Mean:-0.5577
+3rdQu.:-0.1984
+Max.:0.6269
+
+
+
+TimeDomainBodyAccelerationStandardDeviationDirectionY
+
+Standard Deviation of Time Domain signals of body acceleration in direction y
+
+Min.:-0.99024
+1stQu.:-0.94205
+Median:-0.50897
+Mean:-0.46046
+3rdQu.:-0.03077
+Max.:0.61694
+
+TimeDomainBodyAccelerationStandardDeviationDirectionZ
+
+Standard Deviation of Time Domain signals of body acceleration in direction z
+
+Min.:-0.9877
+1stQu.:-0.9498
+Median:-0.6518
+Mean:-0.5756
+3rdQu.:-0.2306
+Max.:0.609
+
+TimeDomainGravityAccelerationMeanDirectionX
+
+Mean of Time Domain signals of gravity acceleration in direction x
+
+Min.:-0.6800
+1stQu.:0.8376
+Median:0.9208
+Mean:0.6975
+3rdQu.:0.9425
+Max.:0.9745
+
+TimeDomainGravityAccelerationMeanDirectionY
+
+Mean of Time Domain signals of gravity acceleration in direction y
+
+Min.:-0.47989
+1stQu.:-0.23319
+Median:-0.12782
+Mean:-0.01621
+3rdQu.:0.08773
+Max.:0.95659
+
+
+TimeDomainGravityAccelerationMeanDirectionZ
+
+Mean of Time Domain signals of gravity acceleration in direction z
+
+Min.:-0.49509
+1stQu.:-0.11726
+Median:0.02384
+Mean:0.07413
+3rdQu.:0.14946
+Max.:0.95787
+
+TimeDomainGravityAccelerationStandardDeviationDirectionX
+
+Standard Deviation of Time Domain signals of gravity acceleration in direction x
+
+Min.:-0.9968
+1stQu.:-0.9825
+Median:-0.9695
+Mean:-0.9638
+3rdQu.:-0.9509
+Max.:-0.8296
+
+TimeDomainGravityAccelerationStandardDeviationDirectionY
+
+Standard Deviation of Time Domain signals of gravity acceleration in direction y
+
+Min.:-0.9942
+1stQu.:-0.9711
+Median:-0.9590
+Mean:-0.9524
+3rdQu.:-0.9370
+Max.:-0.6436
+
+TimeDomainGravityAccelerationStandardDeviationDirectionZ
+
+Standard Deviation of Time Domain signals of gravity acceleration in direction z
+
+Min.:-0.9910
+1stQu.:-0.9605
+Median:-0.9450
+Mean:-0.9364
+3rdQu.:-0.9180
+Max.:-0.6102
+
+
+TimeDomainBodyAccelerationJerkSignalMeanDirectionX
+
+Min.:0.04269
+1stQu.:0.07396
+Median:0.07640
+Mean:0.07947
+3rdQu.:0.08330
+Max.:0.13019
+
+TimeDomainBodyAccelerationJerkSignalMeanDirectionY
+
+Min.:-0.0386872
+1stQu.:0.0004664
+Median:0.0094698
+Mean:0.0075652
+3rdQu.:0.0134008
+Max.:0.0568186
+
+
+TimeDomainBodyAccelerationJerkSignalMeanDirectionZ
+Min.:-0.067458
+1stQu.:-0.010601
+Median:-0.003861
+Mean:-0.004953
+3rdQu.:0.001958
+Max.:0.038053
+
+
+TimeDomainBodyAccelerationJerkSignalStandardDeviationDirectionX
+
+Min.:-0.9946
+1stQu.:-0.9832
+Median:-0.8104
+Mean:-0.5949
+3rdQu.:-0.2233
+Max.:0.5443
+
+TimeDomainBodyAccelerationJerkSignalStandardDeviationDirectionY
+Min.:-0.9895
+1stQu.:-0.9724
+Median:-0.7756
+Mean:-0.5654
+3rdQu.:-0.1483
+Max.:0.3553
+
+
+TimeDomainBodyAccelerationJerkSignalStandardDeviationDirectionZ
+Min.:-0.99329
+1stQu.:-0.98266
+Median:-0.88366
+Mean:-0.73596
+3rdQu.:-0.51212
+Max.:0.03102
+
+TimeDomainBodyGyroscopeMeanDirectionX
+Min.:-0.20578
+1stQu.:-0.04712
+Median:-0.02871
+Mean:-0.03244
+3rdQu.:-0.01676
+Max.:0.1927
+
+TimeDomainBodyGyroscopeMeanDirectionY
+
+Min.:-0.20421
+1stQu.:-0.08955
+Median:-0.07318
+Mean:-0.07426
+3rdQu.:-0.06113
+Max.:0.02747
+
+
+TimeDomainBodyGyroscopeMeanDirectionZ
+
+Min.:-0.07245
+1stQu.:0.07475
+Median:0.08512
+Mean:0.08744
+3rdQu.:0.10177
+Max.:0.1791
+
+TimeDomainBodyGyroscopeStandardDeviationDirectionX
+
+Min.:-0.9943
+1stQu.:-0.9735
+Median:-0.7890
+Mean:-0.6916
+3rdQu.:-0.4414
+Max.:0.2677
+
+TimeDomainBodyGyroscopeStandardDeviationDirectionY
+Min.:-0.9942
+1stQu.:-0.9629
+Median:-0.8017
+Mean:-0.6533
+3rdQu.:-0.4196
+Max.:0.4765
+
+
+TimeDomainBodyGyroscopeStandardDeviationDirectionZ
+Min.:-0.9855
+1stQu.:-0.9609
+Median:-0.8010
+Mean:-0.6164
+3rdQu.:-0.3106
+Max.:0.5649
+
+TimeDomainBodyGyroscopeJerkSignalMeanDirectionX
+Min.   :-0.15721                               
+1st Qu.:-0.10322                               
+Median :-0.09868                               
+Mean   :-0.09606                               
+3rd Qu.:-0.09110                               
+Max.   :-0.02209                               
                                                                                                    
  TimeDomainBodyGyroscopeJerkSignalMeanDirectionY TimeDomainBodyGyroscopeJerkSignalMeanDirectionZ
  Min.   :-0.07681                                Min.   :-0.092500                              
@@ -415,19 +555,42 @@ SubjectID                 Activity  TimeDomainBodyAccelerationMeanDirectionX
  Mean   : 0.0006439                                  Mean   : 0.02193                     
  3rd Qu.: 0.0220881                                  3rd Qu.: 0.06460                     
  Max.   : 0.2032600                                  Max.   : 0.44410                     
-                                                                                          
- angle(tBodyGyroscopeJerkSignalMean,gravityMean) angle(X,gravityMean) angle(Y,gravityMean)
- Min.   :-0.22367                                Min.   :-0.9471      Min.   :-0.87457    
- 1st Qu.:-0.05613                                1st Qu.:-0.7907      1st Qu.: 0.02191    
- Median :-0.01602                                Median :-0.7377      Median : 0.17136    
- Mean   :-0.01137                                Mean   :-0.5243      Mean   : 0.07865    
- 3rd Qu.: 0.03200                                3rd Qu.:-0.5823      3rd Qu.: 0.24343    
- Max.   : 0.18238                                Max.   : 0.7378      Max.   : 0.42476    
-                                                                                          
- angle(Z,gravityMean)
- Min.   :-0.873649   
- 1st Qu.:-0.083912   
- Median : 0.005079   
- Mean   :-0.040436   
- 3rd Qu.: 0.106190   
- Max.   : 0.390444   
+                                                                                            
+angle(tBodyGyroscopeJerkSignalMean,gravityMean) 
+ 
+Min.   :-0.22367                                        
+1st Qu.:-0.05613                                       
+Median :-0.01602                                         
+Mean   :-0.01137                                     
+3rd Qu.: 0.03200                                      
+Max.   : 0.18238                                        
+
+angle(X,gravityMean) 
+Mean of angle of gravity mean in x direction
+Min.   :-0.9471 
+1st Qu.:-0.7907  
+Median :-0.7377
+Mean   :-0.5243  
+3rd Qu.:-0.5823    
+Max.   : 0.7378
+
+angle(Y,gravityMean)
+
+Mean of angle of gravity mean in y direction
+
+Min.   :-0.87457  
+1st Qu.: 0.02191 
+Median : 0.17136
+Mean   : 0.07865  
+3rd Qu.: 0.24343
+Max.   : 0.42476  
+
+angle(Z,gravityMean)
+ 
+Mean of angle of gravity mean in z direction
+Min.   :-0.873649   
+1st Qu.:-0.083912   
+Median : 0.005079   
+Mean   :-0.040436   
+3rd Qu.: 0.106190   
+Max.   : 0.390444   
